@@ -1,6 +1,6 @@
 import React from 'react'
-import { useTheme, makeStyles } from '@material-ui/core/styles'
-import { useMediaQuery, Grid } from '@material-ui/core'
+import { {/* useTheme */}, makeStyles } from '@material-ui/core/styles'
+import { {/* useMediaQuery */}, Grid } from '@material-ui/core'
 // import AppBar from './AppBar.jsx'
 
 const useStyles = makeStyles({
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 export default function Navbar(props) {
 	const classes = useStyles()
-	const theme = useTheme()
+	// const theme = useTheme()
 
 	// const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
