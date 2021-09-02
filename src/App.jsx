@@ -11,38 +11,36 @@ import HireMe from './components/HireMe.jsx'
 
 const useStyles = makeStyles({
 	section : {
-		height: "48em",
+		minHeight: "100vh",
 		alignItems: "center",
 		color: "white",
-		background: "rgb(13,120,18)",
-		background: "linear-gradient(90deg, rgba(13,120,18,1) 0%, rgba(26,153,22,1) 20%, rgba(26,153,22,1) 80%, rgba(13,120,18,1) 100%)"
+		background: "linear-gradient(22deg, rgba(40,193,25,1) 0%, rgba(13,120,18,1) 100%)",
+    backgroundSize: "cover"
 	},
 	presentation : {
-		margin: "12em 0",
-		display: "flex",
+		margin: "25vh 0",
 		justifyContent: "center",
 		alignItems: "center"
 	},
 	meText : {
-		marginRight: "1em",
+		marginRight: "2em",
 		justifyContent: "center",
-		fontSize: "2.5em",
-		lineHeight: "1.5em"
+		lineHeight: "3.5em"
 	},
 	title : {
 		margin: "0",
 		fontWeight: "600",
-		// fontSize: "3em"
+		fontSize: "4em"
 	},
 	subtitle : {
 		margin: "0",
 		color: "#b8b8b8",
-		// fontSize: "1.2em"
+		fontSize: "1.8em"
 	},
 	p : {
 		margin: "0",
 		maxWidth: "25em",
-		fontSize: "0.5em",
+		fontSize: "1.2em",
 		lineHeight: "1.2em",
 		fontWeight: "200",
 		color: "#fff"
@@ -55,13 +53,15 @@ const useStyles = makeStyles({
 
 export default function App() {
 	const classes = useStyles()
+  
 
 	return (
 		<>
-			<section className={classes.section}>
+			<div className={classes.section}>
 				<NavBar />
 
 				<Grid container className={classes.presentation}>
+
 					<Grid item xl={5} className={classes.meText}>
 						<div>
 							<h1 className={classes.title}>Hi, I'm Nico</h1>
@@ -73,9 +73,10 @@ export default function App() {
 					<Grid item xl={5} className={classes.meImage}>
 						<img src="images/NL.png" alt="" style={{height:"15em"}} />
 					</Grid>
+
 				</Grid>
 
-			</section>
+			</div>
 			
 			<BackToTop />
 

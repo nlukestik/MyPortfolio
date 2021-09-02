@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useTheme, makeStyles } from '@material-ui/core/styles'
 import { useMediaQuery, Grid } from '@material-ui/core'
 // import AppBar from './AppBar.jsx'
@@ -23,8 +23,6 @@ export default function Navbar(props) {
 	const classes = useStyles()
 	const theme = useTheme()
 
-  const [points, setPoints] = useState(props.points);
-
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
 	return (
@@ -45,7 +43,7 @@ export default function Navbar(props) {
 								</Grid>
 								<Grid item xl={10} >
 									<ul>
-                    <a href="#aboutMe" onClick={() => setPoints(points + 5)}>about me</a>
+                    <a href="#aboutMe">about me</a>
                     <a href="#skills">skills</a>
                     <a href="#portfolio">portfolio</a>
                     <a href="#hireMe" className={classes.hireMe}>hire me!</a>
