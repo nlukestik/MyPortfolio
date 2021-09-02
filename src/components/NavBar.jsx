@@ -1,6 +1,6 @@
 import React from 'react'
-import { {/* useTheme */}, makeStyles } from '@material-ui/core/styles'
-import { {/* useMediaQuery */}, Grid } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+import { Grid } from '@material-ui/core'
 // import AppBar from './AppBar.jsx'
 
 const useStyles = makeStyles({
