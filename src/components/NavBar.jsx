@@ -1,59 +1,54 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid } from '@material-ui/core'
-// import AppBar from './AppBar.jsx'
+import { AppBar, Toolbar, CssBaseline } from '@material-ui/core'
+import ScrollToChangeColor from './ScrollToChangeColor'
 
-const useStyles = makeStyles({
-	container : {
-    paddingLeft: "3em",
-    paddingRight: "3em",
-    justifyContent: "space-between",
-    alignItems: "center",
-	},
+const useStyles = makeStyles(myTheme => ({
+	mainNav : {
+    backgroundColor: "transparent", 
+  },
+  navBar : {
+    justifyContent: "center"
+  },
   hireMe : {
     background: "white",
-    color: "#00883a",
-    marginLeft: "1.3em",
+    color: "#00883a !important",
+    marginLeft: "1.3em !important",
     padding: "0.4em 1em",
     borderRadius: "10em"
-  }
-})
+  },
+  offset: myTheme.mixins.toolbar
+}))
+
 
 export default function Navbar(props) {
 	const classes = useStyles()
-	// const theme = useTheme()
-
-	// const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
 	return (
-		<>
-			{/* Responsive Navbar */}
-			{/* {isMobile ? (
-				<>
-					<AppBar />
-				</>
-			) : ( */}
-				<>
-					{/* NavBar */}
-					<div >
-						<nav>
-							<Grid container className={classes.container}>
-								<Grid item xl={2}>
-									NL
-								</Grid>
-								<Grid item xl={10} >
-									<ul>
-                    <a href="#aboutMe">about me</a>
-                    <a href="#skills">skills</a>
-                    <a href="#portfolio">portfolio</a>
-                    <a href="#hireMe" className={classes.hireMe}>hire me!</a>
-                  </ul>
-								</Grid>
-							</Grid>
-						</nav>
-					</div>
-				</>
-			{/* )} */}
-		</>
+    <div>
+      <CssBaseline />
+      
+      <ScrollToChangeColor>
+        <AppBar position="fixed">
+          <Toolbar className={classes.navBar}>
+
+            <div className="navToolbar">
+              <div style={{flexGrow: "1"}}>
+                <a href="/">NL</a>
+              </div>
+                
+              <a href="#aboutMe">about me</a>
+              <a href="#skills">skills</a>
+              <a href="#portfolio">portfolio</a>
+              <a href="#hireMe" className={classes.hireMe}>hire me!</a>
+
+            </div>
+            
+          </Toolbar>
+        </AppBar>
+
+        <div className={classes.offset}></div>
+      </ScrollToChangeColor>
+    </div>
 	);
 }

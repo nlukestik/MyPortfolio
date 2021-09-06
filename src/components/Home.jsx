@@ -3,9 +3,8 @@ import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles({
 	presentation : {
-		margin: "25vh 0",
 		justifyContent: "center",
-		alignItems: "center"
+		alignItems: "center",
 	},
 	meText : {
 		marginRight: "2em",

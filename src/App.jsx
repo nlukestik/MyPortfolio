@@ -10,26 +10,31 @@ import Projects from './components/Portfolio.jsx'
 import HireMe from './components/HireMe.jsx'
 
 const useStyles = makeStyles({
-	section : {
-		minHeight: "100vh",
-		alignItems: "center",
+  root: {
+    display: "flex",
+    alignItems: "center",
+    minHeight: "100vh",
 		color: "white",
 		background: "linear-gradient(22deg, rgba(40,193,25,1) 0%, rgba(13,120,18,1) 100%)",
-    backgroundSize: "cover"
-	}
+    backgroundSize: "cover",
+  },
 })
 
 export default function App() {
 	const classes = useStyles()
   
 	return (
-		<>
-			<div className={classes.section} id="scroll-top">
-				<NavBar/>
+    <>
+      <div className={classes.root} id="scroll-top">
 
-        <Home />
-			</div>
-			
+        <NavBar />
+
+        {/* <div className={classes.homeSection}> */}
+          <Home />
+        {/* </div> */}
+        
+      </div>
+
 			<BackToTop />
 
 			<AboutMe />
@@ -41,7 +46,6 @@ export default function App() {
 			<Projects />
 
 			<HireMe />
-			
-		</>
+    </>
 	);
 }
