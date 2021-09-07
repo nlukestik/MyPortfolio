@@ -19,7 +19,7 @@ function ScrollTop(props) {
   const classes = useStyles();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 100
+    threshold: 500
   });
 
 	const handleClick = event => {
@@ -33,7 +33,7 @@ function ScrollTop(props) {
   };
 
   return (
-    <Zoom in={trigger}>
+    <Zoom in={trigger} timeout={500}>
       <div onClick={handleClick} role="presentation" className={classes.root}>
         {children}
       </div>

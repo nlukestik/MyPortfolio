@@ -1,12 +1,9 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { AppBar, Toolbar, CssBaseline } from '@material-ui/core'
+import { AppBar, Toolbar } from '@material-ui/core'
 import ScrollToChangeColor from './ScrollToChangeColor'
 
 const useStyles = makeStyles(myTheme => ({
-	mainNav : {
-    backgroundColor: "transparent", 
-  },
   navBar : {
     justifyContent: "center"
   },
@@ -26,7 +23,6 @@ export default function Navbar(props) {
 
 	return (
     <div>
-      <CssBaseline />
       
       <ScrollToChangeColor>
         <AppBar position="fixed">
@@ -46,9 +42,10 @@ export default function Navbar(props) {
             
           </Toolbar>
         </AppBar>
-
-        <div className={classes.offset}></div>
       </ScrollToChangeColor>
+
+      <div className={classes.offset}></div>
+
     </div>
 	);
 }
