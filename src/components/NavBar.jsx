@@ -30,13 +30,13 @@ export default function Navbar(props) {
 
             <div className="navToolbar">
               <div style={{flexGrow: "1"}}>
-                <a href="/">NL</a>
+                {/* <img src="images/NL.png" alt="" style={{height:"4em"}} /> */}
               </div>
                 
-              <a href="#aboutMe">about me</a>
-              <a href="#skills">skills</a>
-              <a href="#portfolio">portfolio</a>
-              <a href="#hireMe" className={classes.hireMe}>hire me!</a>
+              <a href="#aboutMe">About me</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              {/* <a href="#hireMe" className={classes.hireMe}>hire me!</a> */}
 
             </div>
             

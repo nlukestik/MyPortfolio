@@ -4,14 +4,16 @@ import { useScrollTrigger } from "@material-ui/core"
 const ScrollHandler = (props) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 50,
+    threshold: 510,
     target: props.window ? window() : undefined
   })
 
   return React.cloneElement(props.children, {
     style: {
-      background: trigger ? "linear-gradient(22deg, rgba(40,193,25,1) 0%, rgba(13,120,18,1) 100%)" : "transparent",
-      transition: trigger ? "1s" : "0.2s",
+      position: trigger ? "fixed" : "absolute",
+      top: trigger ? "0" : "60vh", 
+      background: trigger ? "#09DBA9" : "transparent",
+      transition: trigger ? "0s" : "0.1s",
       boxShadow: trigger ? "0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%)" : "none",
     }
   });

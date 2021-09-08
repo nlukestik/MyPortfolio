@@ -12,6 +12,12 @@ const useStyles = makeStyles((theme) => ({
 		bottom: theme.spacing(6),
 		right: theme.spacing(6),
 	},
+  BTTbutton: {
+    background: "#09DBA9",
+    "&:hover" : {
+      background: "#09DBA9",
+    },
+  },
 }));
 
 function ScrollTop(props) {
@@ -46,10 +52,12 @@ ScrollTop.propTypes = {
 };
 
 export default function BackToTop() {
+  const classes = useStyles()
+  
 	return(
 		<>
 			<ScrollTop>
-				<Fab color="secondary" size="small" aria-label="scroll back to top">
+				<Fab className={classes.BTTbutton} size="small" aria-label="scroll back to top">
 					<KeyboardArrowUpIcon />
 				</Fab>
 			</ScrollTop>

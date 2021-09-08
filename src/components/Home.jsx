@@ -49,9 +49,9 @@ export default function Home() {
         </div>
       </Grid>
 
-      <Grid item xl={5} className={classes.meImage}>
+      {/* <Grid item xl={5} className={classes.meImage}>
         <img src="images/NL.png" alt="" style={{height:"15em"}} />
-      </Grid>
+      </Grid> */}
 
     </Grid>
   )

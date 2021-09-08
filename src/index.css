@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;900&display=swap');
 
+
 :root {
   font-family: 'Poppins';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 body {
@@ -16,14 +16,24 @@ code {
 }
 
 .navToolbar {
-  max-width: 900px;
+  max-width: 1300px;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
 .navToolbar a {
-  margin-left: 2em;
-  color: white;
+  margin-left: 1em;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  padding: 0.6em 1.2em;
+  font-size: 15px;
+  font-weight: bold;
   text-decoration: none;
+}
+
+.navToolbar a:hover {
+  background-color: #09DBA9;
+  transition: ease-in 0.2s;
 }
