@@ -12,12 +12,6 @@ const useStyles = makeStyles((theme) => ({
 		bottom: theme.spacing(6),
 		right: theme.spacing(6),
 	},
-  BTTbutton: {
-    background: "#09DBA9",
-    "&:hover" : {
-      background: "#09DBA9",
-    },
-  },
 }));
 
 function ScrollTop(props) {
@@ -25,7 +19,7 @@ function ScrollTop(props) {
   const classes = useStyles();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 500
+    threshold: 100
   });
 
 	const handleClick = event => {
@@ -39,7 +33,7 @@ function ScrollTop(props) {
   };
 
   return (
-    <Zoom in={trigger} timeout={500}>
+    <Zoom in={trigger}>
       <div onClick={handleClick} role="presentation" className={classes.root}>
         {children}
       </div>
@@ -52,12 +46,10 @@ ScrollTop.propTypes = {
 };
 
 export default function BackToTop() {
-  const classes = useStyles()
-  
 	return(
 		<>
 			<ScrollTop>
-				<Fab className={classes.BTTbutton} size="small" aria-label="scroll back to top">
+				<Fab color="primary" size="small" aria-label="scroll back to top">
 					<KeyboardArrowUpIcon />
 				</Fab>
 			</ScrollTop>

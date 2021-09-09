@@ -4,10 +4,10 @@ import { makeStyles } from '@material-ui/core'
 import NavBar from './components/NavBar.jsx'
 import Home from './components/Home.jsx'
 import BackToTop from './components/BackToTop.jsx'
-import AboutMe from './components/AboutMe.jsx'
-import Skills from './components/Skills.jsx'
-import Resume from './components/Resume.jsx'
-import Projects from './components/Projects.jsx'
+// import AboutMe from './components/AboutMe.jsx'
+// import Skills from './components/Skills.jsx'
+// import Resume from './components/Resume.jsx'
+// import Projects from './components/Projects.jsx'
 import HireMe from './components/HireMe.jsx'
 
 const useStyles = makeStyles({
@@ -39,13 +39,11 @@ export default function App() {
 
 			<BackToTop />
 
-			<AboutMe />
+			{/* <AboutMe /> */}
 
-			<Skills />
+			{/* <Skills /> */}
 
-			<Resume />
-
-			<Projects />
+			{/* <Projects /> */}
 
 			<HireMe />
 
