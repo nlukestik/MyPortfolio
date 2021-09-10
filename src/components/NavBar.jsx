@@ -36,7 +36,7 @@ export default function Navbar(props) {
               <a href="#aboutMe">About me</a>
               <a href="#skills">Skills</a>
               <a href="#projects">Projects</a>
-              {/* <a href="#hireMe" className={classes.hireMe}>hire me!</a> */}
+              {/* <a href="#contact" className={classes.hireMe}>hire me!</a> */}
 
             </div>
             

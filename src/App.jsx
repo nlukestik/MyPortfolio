@@ -8,7 +8,7 @@ import BackToTop from './components/BackToTop.jsx'
 // import Skills from './components/Skills.jsx'
 // import Resume from './components/Resume.jsx'
 // import Projects from './components/Projects.jsx'
-import HireMe from './components/HireMe.jsx'
+import Contact from './components/Contact.jsx'
 
 const useStyles = makeStyles({
 	root: {
@@ -45,7 +45,7 @@ export default function App() {
 
 			{/* <Projects /> */}
 
-			<HireMe />
+			<Contact />
 
 		</ThemeProvider>
 
