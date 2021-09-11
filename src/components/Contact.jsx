@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	formTitle: {
 		fontWeight: "bold",
+    fontSize: "1.5em",
 		justifyContent: "center",
 		textAlign: "center",
 	},
@@ -31,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
 		border: "2px solid black"
 	},
 	email: {
-		padding: "0.5em",
+		padding: "1em",
 	},
 	formButtons: {
 		
 	},
 	cvButtons: {
 		width: "100%",
-		padding: "1em 0.5em",
+		padding: "0.7em 0.5em",
 		textAlign: "center",
 		alignItems: "center",	
 		color: "#09DBA9",

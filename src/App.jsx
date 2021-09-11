@@ -1,13 +1,13 @@
+import { useState, useEffect } from 'react'
 import { ThemeProvider } from '@material-ui/styles'
 import myTheme from './themeConfig'
 import { makeStyles } from '@material-ui/core'
 import NavBar from './components/NavBar.jsx'
 import Home from './components/Home.jsx'
 import BackToTop from './components/BackToTop.jsx'
-// import AboutMe from './components/AboutMe.jsx'
+import AboutMe from './components/AboutMe.jsx'
 // import Skills from './components/Skills.jsx'
-// import Resume from './components/Resume.jsx'
-// import Projects from './components/Projects.jsx'
+import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 
 const useStyles = makeStyles({
@@ -19,35 +19,59 @@ const useStyles = makeStyles({
 		background: "#09DBA9",
 		backgroundSize: "cover",
 	},
-	offset: myTheme.mixins.toolbar
 })
 
 export default function App() {
 	const classes = useStyles()
 	
+	const [offsetY, setOffsetY] = useState(0)
+	const handleScroll = () => setOffsetY(window.pageYOffset)
+	
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll)
+
+		return () => window.removeEventListener("scroll", handleScroll)
+	}, [])
+
 	return (
-		
-		<ThemeProvider theme={myTheme}>
 
-			<div className={classes.root} id="scroll-top">
-      
-				<NavBar />
+		<section className="Parallax">
 
-				<Home />
-
+			<div className="Parallax__bg">
+				<div className="Parallax__bg__1" />
+				<div className="Parallax__bg__2" />
 			</div>
 
-			<BackToTop />
+			<div 
+				className="Parallax__grid" 
+				style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+			/>
 
-			{/* <AboutMe /> */}
+			<div className="Parallax__content">
+				<ThemeProvider theme={myTheme}>
 
-			{/* <Skills /> */}
+					<div className={classes.root} id="scroll-top">
+					
+						<NavBar />
 
-			{/* <Projects /> */}
+						<Home />
 
-			<Contact />
+					</div>
 
-		</ThemeProvider>
+					<BackToTop />
+
+					<AboutMe />
+
+					{/* <Skills /> */}
+
+					<Projects />
+
+					<Contact />
+
+				</ThemeProvider>
+			</div>
+
+		</section>
 
 	);
 }

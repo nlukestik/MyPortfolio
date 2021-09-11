@@ -12,9 +12,29 @@ body {
 }
 
 code {
-	font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
+/* PARALLAX */
+/* 
+.Parallax {
+
+  &__bg {
+
+    &__1 {}
+    &__2 {}
+
+  }
+
+  &__grid {}
+
+  &__content {}
+  
+} 
+*/
+
+
+/* NAVBAR */
 .navToolbar {
   max-width: 1300px;
   width: 100%;
