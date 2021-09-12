@@ -53,7 +53,6 @@ export default function Projects() {
               component="img"
               alt="Project 1"
               image="/images/project1.png"
-              title="Project 1"
             />
             <CardContent style={{padding: "0"}}>
               <h2 className={classes.cardTitle}>Project 1</h2>
@@ -73,7 +72,6 @@ export default function Projects() {
               component="img"
               alt="Project 2"
               image="/images/project2.png"
-              title="Project 2"
             />
             <CardContent style={{padding: "0"}}>
               <h2 className={classes.cardTitle}>Project 2</h2>

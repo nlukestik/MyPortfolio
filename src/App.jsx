@@ -33,6 +33,16 @@ export default function App() {
 		return () => window.removeEventListener("scroll", handleScroll)
 	}, [])
 
+  // var rows = [];
+  // for (var i = 0; i < 4; i++) {
+  //   rows.push(<div className="lineX" key={i} style={{top: `${i * 10}em`, margin: "5em 0"}}/>);
+  // }
+
+  // var columns = [];
+  // for (var j = 0; j < 10; j++) {
+  //   columns.push(<div className="lineY" key={j} style={{left: `${j * 10}em`, margin: "5em 0"}}/>);
+  // }
+
 	return (
 
 		<section className="Parallax">
@@ -42,19 +52,22 @@ export default function App() {
 				<div className="Parallax__bg__2" />
 			</div>
 
-			<div 
+			<div
 				className="Parallax__grid" 
-				style={{ transform: `translateY(${offsetY * 0.5}px)` }}
-			/>
+				style={{ zIndex: "0", transform: `translateY(${offsetY * 0.5}px)` }}
+			>
+      </div>
+        {/* {columns}
+        {rows} */}
 
 			<div className="Parallax__content">
 				<ThemeProvider theme={myTheme}>
 
 					<div className={classes.root} id="scroll-top">
 					
-						<NavBar />
 
 						<Home />
+						<NavBar />
 
 					</div>
 
