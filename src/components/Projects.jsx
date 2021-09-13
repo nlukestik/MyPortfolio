@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Card, CardContent, CardMedia } from '@material-ui/core';
-import {ReactComponent as SvgArrowRight} from '../svgicons/arrow-right.svg';
+import { Grid } from '@material-ui/core';
+import ProjectCard from './ProjectCard';
 
 const useStyles = makeStyles((theme) => ({
 	root : {
@@ -20,20 +20,6 @@ const useStyles = makeStyles((theme) => ({
 		fontSize: "2.7em",
 		border: "3px solid black"
 	},
-  card : {
-    boxShadow: "none",
-    borderRadius: "0"
-  },
-  cardTitle : {
-    margin: "0.3em 0 0",
-    color: "black",
-    fontSize: "2.6em",
-  },
-  cardText : {
-    margin: "0",
-    color: "black",
-    fontSize: "19px",
-  }
 	
 }));
 
@@ -47,43 +33,19 @@ export default function Projects() {
 			
 			<Grid container spacing={4}>
 
-        <Grid item sm={6} xs={12}>
-          <Card className={classes.card} >
-            <CardMedia
-              component="img"
-              alt="Project 1"
-              image="/images/project1.png"
-            />
-            <CardContent style={{padding: "0"}}>
-              <h2 className={classes.cardTitle}>Project 1</h2>
-              <p className={classes.cardText}>
-                isl ut aliquip ex ea commodo consequat. Duis autem 
-              </p>
-            </CardContent>
-            
-            <SvgArrowRight />
-              
-          </Card>
-        </Grid>
+        <ProjectCard 
+          image="/images/project1.png"
+          title="Project 1"
+          text="isl ut aliquip ex ea commodo consequat. Duis autem"
+          alt="Project 1"
+        />
 
-        <Grid item sm={6} xs={12}>
-          <Card className={classes.card} >
-            <CardMedia
-              component="img"
-              alt="Project 2"
-              image="/images/project2.png"
-            />
-            <CardContent style={{padding: "0"}}>
-              <h2 className={classes.cardTitle}>Project 2</h2>
-              <p className={classes.cardText}>
-                isl ut aliquip ex ea commodo consequat. Duis autem 
-              </p>
-            </CardContent>
-            
-            <SvgArrowRight />
-              
-          </Card>
-        </Grid>
+        <ProjectCard 
+          image="/images/project2.png"
+          title="Project 2"
+          text="isl ut aliquip ex ea commodo consequat. Duis autem"
+          alt="Project 2"
+        />
 
       </Grid>
 

@@ -22,10 +22,10 @@ export default function Navbar(props) {
 	const classes = useStyles()
 
 	return (
-    <div>
+    <div >
       
       <ScrollToChangeColor>
-        <AppBar position="fixed">
+        <AppBar>
           <Toolbar className={classes.navBar}>
 
             <div className="navToolbar">

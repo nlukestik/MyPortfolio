@@ -54,11 +54,11 @@ export default function App() {
 
 			<div
 				className="Parallax__grid" 
-				style={{ zIndex: "0", transform: `translateY(${offsetY * 0.5}px)` }}
+				style={{ transform: `translateY(${offsetY * 0.5}px)` }}
 			>
-      </div>
         {/* {columns}
         {rows} */}
+      </div>
 
 			<div className="Parallax__content">
 				<ThemeProvider theme={myTheme}>
@@ -66,8 +66,8 @@ export default function App() {
 					<div className={classes.root} id="scroll-top">
 					
 
-						<Home />
 						<NavBar />
+						<Home />
 
 					</div>
 

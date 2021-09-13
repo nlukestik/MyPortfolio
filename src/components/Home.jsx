@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/styles'
 // import { Grid } from '@material-ui/core'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
 	root : {
     margin: "7% auto 10%"
 	},
@@ -31,12 +31,12 @@ const useStyles = makeStyles({
     left: "44%",
     height: "70%",
 	},
-  divCircle :{
+  circle :{
     position: "absolute",
     top: "46%",
     left: "15%",
   },
-  circle : {
+  circleText : {
     display: "inline-grid",
     justifyItems: "center",
     alignItems: "center",
@@ -51,7 +51,7 @@ const useStyles = makeStyles({
     textDecoration: "none",
     color: "white",
   }
-})
+}))
 
 export default function Home() {
   const classes = useStyles()
@@ -65,26 +65,13 @@ export default function Home() {
 
       <img src="/images/avatar.png" alt="avatar" className={classes.avatar} />
     
-      <div className={classes.divCircle}>
-        <a href="#contact" className={classes.circle}>
+      <div className={classes.circle}>
+        <a href="#contact" className={classes.circleText}>
           <span style={{fontSize: "15px"}}>GET IN<br/></span>
           <span style={{fontSize: "13px"}}>TOUCH</span>
         </a>
       </div>
 
-
-
-      {/* <Grid container className={classes.presentation}>
-
-        <Grid item xl={5} className={classes.meText}>
-          <div>
-            <h1 className={classes.title}>Hi, I'm Nico</h1>
-            <h6 className={classes.subtitle}>Frontend Developer</h6>
-            <p className={classes.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </div>
-        </Grid>
-
-      </Grid> */}
     </div>
   )
 };
