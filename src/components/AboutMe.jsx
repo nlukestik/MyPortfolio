@@ -33,9 +33,9 @@ export default function AboutMe() {
 	const classes = useStyles()
 
 	return(
-		<div className={classes.root}>
+		<section className={classes.root} id="aboutMe">
 			
-			<h1 id="aboutMe" className={classes.title}>About me</h1>
+			<h1 className={classes.title}>About me</h1>
 			
 			<p className={classes.text}>
 				isl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in 
@@ -44,6 +44,6 @@ export default function AboutMe() {
 			</p>
 
 			
-		</div>
+		</section>
 	)
 }
