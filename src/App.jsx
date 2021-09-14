@@ -16,8 +16,10 @@ const useStyles = makeStyles({
 		alignItems: "center",
 		minHeight: "75vh",
 		color: "white",
-		background: "#09DBA9",
-		backgroundSize: "cover",
+		backgroundColor: "#09DBA9",
+    backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0.2) 2px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 2px, transparent 1px)",
+    backgroundSize: "170px 170px",
+    backgroundPosition: "115px 90px",
 	},
 })
 
@@ -33,16 +35,6 @@ export default function App() {
 		return () => window.removeEventListener("scroll", handleScroll)
 	}, [])
 
-  // var rows = [];
-  // for (var i = 0; i < 4; i++) {
-  //   rows.push(<div className="lineX" key={i} style={{top: `${i * 10}em`, margin: "5em 0"}}/>);
-  // }
-
-  // var columns = [];
-  // for (var j = 0; j < 10; j++) {
-  //   columns.push(<div className="lineY" key={j} style={{left: `${j * 10}em`, margin: "5em 0"}}/>);
-  // }
-
 	return (
 
 		<section className="Parallax">
@@ -56,8 +48,6 @@ export default function App() {
 				className="Parallax__grid" 
 				style={{ transform: `translateY(${offsetY * 0.5}px)` }}
 			>
-        {/* {columns}
-        {rows} */}
       </div>
 
 			<div className="Parallax__content">

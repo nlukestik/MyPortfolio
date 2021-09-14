@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Button, Tooltip, ClickAwayListener } from '@material-ui/core'
+import { Grid, Button, Tooltip } from '@material-ui/core'
 import {ReactComponent as SvgCopy} from '../svgicons/copy.svg';
 
 
@@ -9,7 +9,10 @@ const useStyles = makeStyles((theme) => ({
 		display: "flex",
 		justifyContent: "center",
 		padding: "2.5em 3em",
-		background: "black",
+		backgroundColor: "black",
+    backgroundImage: "linear-gradient(to right, rgba(9, 219, 169, 0.3) 2px, transparent 1px), linear-gradient(to bottom, rgba(9, 219, 169, 0.3) 2px, transparent 1px)",
+    backgroundSize: "170px 170px",
+    backgroundPosition: "115px 90px",
 	},
 	formContainer: {
 		width: "30%",
@@ -50,24 +53,20 @@ const useStyles = makeStyles((theme) => ({
 		minWidth: "0",
 		marginLeft: "1em",
 		padding:"0",
-		"&:hover" : {
-			background: "none"
-		}
 	}
 }));
 
 export default function Contact() {
 	const classes = useStyles()
-
+  
 	const [open, setOpen] = React.useState(false);
-
-	const handleTooltipClose = () => {
-		setOpen(false);
-	};
-
+  
+  const email = "nicolaslukestik@gmail.com"
+  
 	const handleTooltipOpen = () => {
 		setOpen(true);
-		navigator.clipboard.writeText('nicolaslukestik@gmail.com')
+		navigator.clipboard.writeText(email)
+    setTimeout(function () {setOpen(false)}, 1300);
 	};
 
 	return(
@@ -85,25 +84,22 @@ export default function Contact() {
 								<a 
 									href="mailto:nicolaslukestik@gmail.com" 
 									style={{textDecoration: "none", color: "black"}}>
-									nicolaslukestik@gmail.com
+									{email}
 								</a>
 							</code>
 
-							<ClickAwayListener onClickAway={handleTooltipClose}>
-									<Tooltip
-										arrow
-										placement="right"
-										open={open}
-										disableTouchListener
-										title="Copied to Clipboard">
-										<Button 
-											className={classes.copyBtn}
-											disableRipple  
-											onClick={handleTooltipOpen}>
-											<SvgCopy />
-										</Button>
-									</Tooltip>
-							</ClickAwayListener>
+              <Tooltip
+                arrow
+                placement="right"
+                open={open}
+                title="Copied to Clipboard">
+                <Button 
+                  className={classes.copyBtn}
+                  disableRipple  
+                  onClick={handleTooltipOpen}>
+                  <SvgCopy />
+                </Button>
+              </Tooltip>
 						</div>
 					</Grid>
 

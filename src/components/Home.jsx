@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     right: "30%",
     padding: "0.5em 0.7em",
     background: "white",
-    border: "3px solid black",
+    border: "4px solid black",
 		fontWeight: "600",
 		fontSize: "1.4em",
     color: "#09DBA9",
@@ -41,8 +41,8 @@ const useStyles = makeStyles(theme => ({
     justifyItems: "center",
     alignItems: "center",
     alignContent: "center",
-    height: "6.5em",
-    width: "6.5em",
+    height: "8em",
+    width: "8em",
     transform: "rotateZ(-23.8deg) !important",
     backgroundColor: "#020202",
     boxShadow: "-2px 4px 4px 0px rgb(0, 0, 0, 0.5)",
@@ -50,6 +50,10 @@ const useStyles = makeStyles(theme => ({
     fontWeight: "bold",
     textDecoration: "none",
     color: "white",
+    transitionDuration: "0.3s",
+    "&:hover" : {
+
+    }
   }
 }))
 
@@ -67,11 +71,11 @@ export default function Home() {
     
       <div className={classes.circle}>
         <a href="#contact" className={classes.circleText}>
-          <span style={{fontSize: "15px"}}>GET IN<br/></span>
-          <span style={{fontSize: "13px"}}>TOUCH</span>
+          <span style={{fontSize: "19px"}}>GET IN<br/></span>
+          <span style={{fontSize: "17px"}}>TOUCH</span>
         </a>
       </div>
-
+      
     </div>
   )
 };
