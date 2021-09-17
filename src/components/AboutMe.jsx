@@ -1,24 +1,24 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import SectionTitle from './SectionTitle';
 
 const useStyles = makeStyles((theme) => ({
-	root : {
-		margin: "10rem auto",
-    flexWrap: "wrap",
-    boxSizing: "border-box",
-		width: "70%",
-    maxWidth: "65em"
-		
-	},
-	title : {
-		display: "inline-grid",
-    alignItems: "center",
-    textAlign: "center",
-    minWidth: "5.8em",
-    minHeight: "1.8em",
-		fontSize: "2.7em",
-		border: "3px solid black"
-	},
+	// root : {
+	// 	margin: "10rem auto",
+  //   flexWrap: "wrap",
+  //   boxSizing: "border-box",
+	// 	width: "70%",
+  //   maxWidth: "65em"
+	// },
+	// title : {
+	// 	display: "inline-grid",
+  //   alignItems: "center",
+  //   textAlign: "center",
+  //   minWidth: "5.8em",
+  //   minHeight: "1.8em",
+	// 	fontSize: "2.7em",
+	// 	border: "3px solid black"
+	// },
 	text : {
 		width: "55%",
 		margin: "2em auto",
@@ -29,13 +29,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function AboutMe() {
+export default function AboutMe(props) {
 	const classes = useStyles()
 
 	return(
-		<section className={classes.root} id="aboutMe">
+		<section id={props.id}>
 			
-			<h1 className={classes.title}>About me</h1>
+			<SectionTitle title="About me" />
 			
 			<p className={classes.text}>
 				isl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in 

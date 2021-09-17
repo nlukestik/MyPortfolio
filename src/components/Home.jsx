@@ -69,7 +69,7 @@ export default function Home() {
 
       <img src="/images/avatar.png" alt="avatar" className={classes.avatar} />
     
-      <div className={classes.circle}>
+      <div className={classes.circle} id="btn-contact">
         <a href="#contact" className={classes.circleText}>
           <span style={{fontSize: "19px"}}>GET IN<br/></span>
           <span style={{fontSize: "17px"}}>TOUCH</span>

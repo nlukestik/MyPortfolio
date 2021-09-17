@@ -33,10 +33,10 @@ export default function Navbar(props) {
                 {/* <img src="images/NL.png" alt="" style={{height:"4em"}} /> */}
               </div>
                 
-              <a href="#aboutMe">About me</a>
-              <a href="#skills">Skills</a>
-              <a href="#projects">Projects</a>
-              {/* <a href="#contact" className={classes.hireMe}>hire me!</a> */}
+              <a id="nav-aboutMe" href="#aboutMe">About me</a>
+              <a id="nav-skills" href="#skills">Skills</a>
+              <a id="nav-projects" href="#projects">Projects</a>
+              {/* <a id="nav-contact" href="#contact" className={classes.hireMe}>hire me!</a> */}
 
             </div>
             

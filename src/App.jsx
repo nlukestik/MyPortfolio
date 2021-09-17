@@ -10,7 +10,7 @@ import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 
 const useStyles = makeStyles({
-	root: {
+	home: {
 		display: "flex",
 		alignItems: "center",
 		minHeight: "75vh",
@@ -20,7 +20,13 @@ const useStyles = makeStyles({
     backgroundSize: "170px 170px",
     backgroundPosition: "115px 90px",
 	},
-
+	section : {
+		margin: "10rem auto",
+    flexWrap: "wrap",
+    boxSizing: "border-box",
+		width: "70%",
+    maxWidth: "65em"
+	},
 })
 
 export default function App() {
@@ -29,22 +35,29 @@ export default function App() {
 	return (
     <ThemeProvider theme={myTheme}>
 
-      <div className={classes.root} id="scroll-top">
+      <div className={classes.home} id="scroll-top">
       
         <NavBar />
         <Home />
 
       </div>
 
+
+      <div className={classes.section}>
+				<AboutMe id="aboutMe" />
+			</div>
+
+			{/* <div className={classes.section}>
+      	<Skills id="skills" />
+			</div> */}
+
+      <div className={classes.section}>
+				<Projects id="projects"/>
+			</div>
+      
+			<Contact id="contact"/>
+
       <BackToTop />
-
-      <AboutMe />
-
-      {/* <Skills /> */}
-
-      <Projects />
-
-      <Contact />
 
     </ThemeProvider>
 

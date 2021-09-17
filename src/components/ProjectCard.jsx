@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   title : {
     margin: "0.3em 0 0",
     color: "black",
-    fontSize: "2.6em",
+    fontSize: "2.4em",
   },
   text : {
     margin: "0",
