@@ -9,7 +9,7 @@ import AboutMe from './components/AboutMe.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
 	home: {
 		display: "flex",
 		alignItems: "center",
@@ -21,13 +21,15 @@ const useStyles = makeStyles({
     backgroundPosition: "115px 90px",
 	},
 	section : {
-		margin: "10rem auto",
+		margin: "11rem auto",
     flexWrap: "wrap",
     boxSizing: "border-box",
-		width: "70%",
-    maxWidth: "65em"
+    maxWidth: "70%",
+		[theme.breakpoints.down('sm')]: {
+			maxWidth: "85%",
+		},
 	},
-})
+}))
 
 export default function App() {
 	const classes = useStyles()
@@ -44,18 +46,18 @@ export default function App() {
 
 
       <div className={classes.section}>
-				<AboutMe id="aboutMe" />
+				<AboutMe />
 			</div>
 
 			{/* <div className={classes.section}>
-      	<Skills id="skills" />
+      	<Skills />
 			</div> */}
 
       <div className={classes.section}>
-				<Projects id="projects"/>
+				<Projects />
 			</div>
       
-			<Contact id="contact"/>
+			<Contact />
 
       <BackToTop />
 

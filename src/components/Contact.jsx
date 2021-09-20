@@ -20,22 +20,39 @@ const useStyles = makeStyles((theme) => ({
 		padding: "2em 7em 3em",
 		border: "8px solid #09DBA9",
 		background: "white",
+		[theme.breakpoints.down('sm')]: {
+			width: "80%",
+			padding: "1em 2em 1.5em"
+		},
+		[theme.breakpoints.between('sm','md')]: {
+			width: "50%",
+			padding: "1.5em 4em 2.5em"
+		},
+		[theme.breakpoints.up('lg')]: {
+			width: "30%",
+		},
 	},
 	formTitle: {
 		fontWeight: "bold",
-    fontSize: "1.5em",
+    fontSize: "1.2em",
 		justifyContent: "center",
 		textAlign: "center",
+		[theme.breakpoints.between('sm','md')]: {
+			// fontSize: 14,
+		},
 	},
 	formEmail: {
 		display: "flex",
 		marginBottom:"1em",
 		justifyContent: "center",
 		background: "#09DBA9",
-		border: "2px solid black"
+		border: "2px solid black",
 	},
 	email: {
 		padding: "1em",
+		[theme.breakpoints.down('xs')]: {
+			fontSize: 11
+		},
 	},
 	formButtons: {
 		
@@ -53,7 +70,24 @@ const useStyles = makeStyles((theme) => ({
 		minWidth: "0",
 		marginLeft: "1em",
 		padding:"0",
-	}
+		[theme.breakpoints.down('xs')]: {
+			display: "none"
+		},
+	},
+
+
+	// [theme.breakpoints.down('sm')]: {
+	// 	margin: "10px auto",
+	// 	justifyContent: "left",
+	// 	textAlign: "justify",
+	// 	fontSize: 18,
+	// },
+	// [theme.breakpoints.between('sm','md')]: {
+	// 	width: "60%",
+	// },
+	// [theme.breakpoints.up('lg')]: {
+	// 	width: "55%",
+	// },
 }));
 
 export default function Contact() {
@@ -105,13 +139,13 @@ export default function Contact() {
 
 					<Grid container spacing={2} className={classes.formButtons}>
 
-						<Grid item lg={6} md={6} sm={12} style={{display: "flex"}}>
+						<Grid item sm={6} xs={12} style={{display: "flex"}}>
 								<a className={classes.cvButtons} href="CV-Nicolas-Lukestik.pdf" download >
 									<code>CV (Spanish)</code> 
 								</a>
 						</Grid>
 
-						<Grid item lg={6} md={6} sm={12} style={{display: "flex"}}>
+						<Grid item sm={6} xs={12} style={{display: "flex"}}>
 								<a className={classes.cvButtons} href="Resume-Nicolas-Lukestik.pdf" download>
 									<code>Resume (English)</code>
 								</a>

@@ -8,8 +8,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     minWidth: "5.8em",
     minHeight: "1.8em",
-		fontSize: "2.7em",
-		border: "3px solid black"
+		fontSize: 43.2,
+		border: "3px solid black",
+		[theme.breakpoints.down('sm')]: {
+			fontSize: 30,
+		},
+		[theme.breakpoints.between('sm','md')]: {
+			fontSize: 35,
+		},
 	},
 	
 }));
@@ -19,7 +25,9 @@ export default function SectionTitle(props) {
   
 	return(
     <>
-			<h1 className={classes.title}>{props.title}</h1>
+			<h1 className={classes.title}>
+				{props.title}
+			</h1>
 		</>
   )
 }

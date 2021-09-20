@@ -3,29 +3,24 @@ import { makeStyles } from '@material-ui/core/styles'
 import SectionTitle from './SectionTitle';
 
 const useStyles = makeStyles((theme) => ({
-	// root : {
-	// 	margin: "10rem auto",
-  //   flexWrap: "wrap",
-  //   boxSizing: "border-box",
-	// 	width: "70%",
-  //   maxWidth: "65em"
-	// },
-	// title : {
-	// 	display: "inline-grid",
-  //   alignItems: "center",
-  //   textAlign: "center",
-  //   minWidth: "5.8em",
-  //   minHeight: "1.8em",
-	// 	fontSize: "2.7em",
-	// 	border: "3px solid black"
-	// },
 	text : {
-		width: "55%",
 		margin: "2em auto",
 		justifyContent: "center",
 		fontWeight: "bold",
 		fontSize: "1.3em",
-		textAlign: "left"
+		textAlign: "left",
+		[theme.breakpoints.down('sm')]: {
+			margin: "10px auto",
+			justifyContent: "left",
+			textAlign: "justify",
+			fontSize: 18,
+		},
+		[theme.breakpoints.between('sm','md')]: {
+			width: "60%",
+		},
+		[theme.breakpoints.up('lg')]: {
+			width: "55%",
+		},
 	},
 }));
 
@@ -33,7 +28,7 @@ export default function AboutMe(props) {
 	const classes = useStyles()
 
 	return(
-		<section id={props.id}>
+		<div id="aboutMe">
 			
 			<SectionTitle title="About me" />
 			
@@ -44,6 +39,6 @@ export default function AboutMe(props) {
 			</p>
 
 			
-		</section>
+		</div>
 	)
 }

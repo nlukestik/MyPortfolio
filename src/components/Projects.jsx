@@ -20,13 +20,13 @@ export default function Projects(props) {
   // const classes = useStyles()
   
 	return(
-    <section id={props.id}>
+    <section id="projects">
 			
 			<SectionTitle title="Projects" />
 			
       {/* <div className={classes.cardsContainer}> */}
         
-			<Grid container spacing={4}>
+			<Grid container spacing={5}>
       
         <Grid item sm={6} xs={12}>
           <ProjectCard
@@ -34,7 +34,7 @@ export default function Projects(props) {
             title="Bites Dev"
             text="isl ut aliquip ex ea commodo consequat. Duis autem"
             alt="Bites Dev"
-            marginLeft="0"
+            // marginLeft="0"
           />
         </Grid>
 

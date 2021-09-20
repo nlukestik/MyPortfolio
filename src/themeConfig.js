@@ -1,11 +1,11 @@
 import { createTheme } from '@material-ui/core/styles'
 
 const myTheme = createTheme({
-  palette: {
+  palette : {
     // background: {
     //   default: "#656565"
     // },
-    primary: {
+    primary : {
       light: "#0CF78F",
       main: "#09DBA9",
       dark: "#0A2626"
@@ -17,7 +17,15 @@ const myTheme = createTheme({
     //   hint: "rgba(0, 0, 0, 0.38)"
     // }
 
-  }
+  },
+	typography : {
+		fontFamily: [
+			'Poppins',
+			'Helvetica',
+			'Arial',
+			'sans-serif',
+		].join(','),
+	}
 })
 
 export default myTheme

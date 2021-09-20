@@ -7,19 +7,25 @@ const useStyles = makeStyles((theme) => ({
   card : {
     boxShadow: "none",
     borderRadius: "0",
-    minWidth: "31.5em",
-    marginLeft: "3%"
+    // marginLeft: "3%",
   },
   title : {
     margin: "0.3em 0 0",
-    color: "black",
-    fontSize: "2.4em",
+    fontSize: 35,
+		fontWeight: 700,
+		lineHeight: 1.4,
+		[theme.breakpoints.down('md')]: {
+			fontSize: 26,
+		},
   },
   text : {
     margin: "0",
-    color: "black",
-    fontSize: "19px",
-  }
+    fontSize: 19,
+		textAlign: "justify",
+		[theme.breakpoints.down('md')]: {
+			fontSize: 15,
+		},
+  },
 	
 }));
 
@@ -39,10 +45,10 @@ export default function ProjectCard(props) {
 
         <CardContent style={{padding: "0"}}>
 
-          <h2 className={classes.title}>
-            {props.title}
-          </h2>
-
+					<h2 className={classes.title}>
+						{props.title}
+					</h2>
+          
           <p className={classes.text}>
             {props.text} 
           </p>
