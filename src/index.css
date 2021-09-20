@@ -54,6 +54,18 @@ code {
 }
 
 .navToolbar .nav-item:hover {
-  background-color: #09DBA9;
+	background-color: #09DBA9;
   transition: ease-in 0.2s;
+}
+
+@media (max-width: 380px) {
+	.navToolbar .nav-item {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 314px) {
+	.navToolbar .nav-item {
+		font-size: 10px;
+	}
 }

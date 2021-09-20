@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { animateScroll as scroll } from 'react-scroll'
-// import { ScrollTo } from "react-scroll-to"
 // import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -27,18 +26,30 @@ const useStyles = makeStyles(theme => ({
 		fontWeight: "600",
 		fontSize: "1.4em",
     color: "#09DBA9",
+		[theme.breakpoints.down('sm')]: {
+			top: "20%",
+			right: "4%"
+		},
 	},
 	avatar : {
     position: "absolute",
     top: "20%",
     left: "44%",
-    height: "70%",
+    width: "32%",
+		[theme.breakpoints.down('sm')]: {
+			width: "100%",
+			top: "33%",
+			left: 0
+		},
 	},
   circle :{
     position: "absolute",
     top: "46%",
     left: "15%",
-		
+		[theme.breakpoints.down('sm')]: {
+			top: "47%",
+			left: "57%"
+		},
   },
   circleText : {
 		display: "inline-grid",
@@ -76,7 +87,10 @@ export default function Home() {
       <h1 className={classes.title}>Nicolas Lukestik</h1>
 
 			<div className={classes.circle}>
-				<div className={classes.circleText} onClick={() => scroll.scrollToBottom()}>
+				<div
+					className={classes.circleText} 
+					onClick={() => scroll.scrollToBottom()}
+				>
 					<span style={{fontSize: "19px"}}>GET IN<br/></span>
 					<span style={{fontSize: "17px"}}>TOUCH</span>
 				</div>
