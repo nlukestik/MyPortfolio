@@ -1,4 +1,7 @@
+import React from 'react'
 import { makeStyles } from '@material-ui/styles'
+import { animateScroll as scroll } from 'react-scroll'
+// import { ScrollTo } from "react-scroll-to"
 // import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -35,9 +38,10 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     top: "46%",
     left: "15%",
+		
   },
   circleText : {
-    display: "inline-grid",
+		display: "inline-grid",
     justifyItems: "center",
     alignItems: "center",
     alignContent: "center",
@@ -51,30 +55,32 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     color: "white",
     transitionDuration: "0.3s",
-    "&:hover" : {
-
-    }
+    userSelect: "none",
+		[theme.breakpoints.up('sm')]: {
+			cursor: "pointer",
+		},
   }
 }))
 
 export default function Home() {
-  const classes = useStyles()
+	const classes = useStyles()
+	
 
   return (
     <div className={classes.root}>
 
       <div className={classes.square} />
 
+      <img src="/images/avatar.png" alt="avatar" className={classes.avatar} />
+
       <h1 className={classes.title}>Nicolas Lukestik</h1>
 
-      <img src="/images/avatar.png" alt="avatar" className={classes.avatar} />
-    
-      <div className={classes.circle} id="btn-contact">
-        <a href="#contact" className={classes.circleText}>
-          <span style={{fontSize: "19px"}}>GET IN<br/></span>
-          <span style={{fontSize: "17px"}}>TOUCH</span>
-        </a>
-      </div>
+			<div className={classes.circle}>
+				<div className={classes.circleText} onClick={() => scroll.scrollToBottom()}>
+					<span style={{fontSize: "19px"}}>GET IN<br/></span>
+					<span style={{fontSize: "17px"}}>TOUCH</span>
+				</div>
+			</div>
       
     </div>
   )

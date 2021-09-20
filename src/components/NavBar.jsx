@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { AppBar, Toolbar } from '@material-ui/core'
+import { Link } from 'react-scroll'
 import ScrollToChangeColor from './ScrollToChangeColor'
 
 const useStyles = makeStyles(myTheme => ({
@@ -14,7 +15,7 @@ const useStyles = makeStyles(myTheme => ({
     padding: "0.4em 1em",
     borderRadius: "10em"
   },
-  offset: myTheme.mixins.toolbar
+  // offset: myTheme.mixins.toolbar
 }))
 
 
@@ -32,11 +33,42 @@ export default function Navbar(props) {
               <div style={{flexGrow: "1"}}>
                 {/* <img src="images/NL.png" alt="" style={{height:"4em"}} /> */}
               </div>
-                
-              <a id="nav-aboutMe" href="#aboutMe">About me</a>
-              <a id="nav-skills" href="#skills">Skills</a>
-              <a id="nav-projects" href="#projects">Projects</a>
-              {/* <a id="nav-contact" href="#contact" className={classes.hireMe}>hire me!</a> */}
+              
+							<Link
+								activeClass="active"
+								to="aboutMe"
+								spy={true}
+								smooth={true}
+								offset={-40}
+								duration={500}
+								className="nav-item"
+							>
+								About me
+							</Link>
+
+							<Link
+								activeClass="active"
+								to="skills"
+								spy={true}
+								smooth={true}
+								offset={-40}
+								duration={500}
+								className="nav-item"
+							>
+								Skills
+							</Link>
+
+							<Link
+								activeClass="active"
+								to="projects"
+								spy={true}
+								smooth={true}
+								offset={-40}
+								duration={500}
+								className="nav-item"
+							>
+								Projects
+							</Link>
 
             </div>
             
@@ -44,7 +76,7 @@ export default function Navbar(props) {
         </AppBar>
       </ScrollToChangeColor>
 
-      <div className={classes.offset}></div>
+      {/* <div className={classes.offset}></div> */}
 
     </div>
 	);
