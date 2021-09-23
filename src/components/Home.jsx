@@ -67,8 +67,14 @@ const useStyles = makeStyles(theme => ({
     color: "white",
     transitionDuration: "0.3s",
     userSelect: "none",
+    
+		[theme.breakpoints.down('sm')]: {
+      height: "7em",
+      width: "7em",
+      
+		},
 		[theme.breakpoints.up('sm')]: {
-			cursor: "pointer",
+      cursor: "pointer",
 		},
   }
 }))
