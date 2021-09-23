@@ -4,18 +4,6 @@ import { Grid } from '@material-ui/core';
 import ProjectCard from './ProjectCard';
 import SectionTitle from './SectionTitle'
 
-// const useStyles = makeStyles((theme) => ({
-//   cardsContainer : {
-//     display: "flex",
-//     maxHeight: "60em",
-//     overflowX: "auto",
-//     "&::-webkit-scrollbar" : {
-//       width: "0"
-//     }
-//   }
-	
-// }));
-
 export default function Projects(props) {
   // const classes = useStyles()
   
@@ -24,8 +12,6 @@ export default function Projects(props) {
 			
 			<SectionTitle title="Projects" />
 			
-      {/* <div className={classes.cardsContainer}> */}
-        
 			<Grid container spacing={5}>
       
         <Grid item sm={6} xs={12}>
@@ -34,6 +20,7 @@ export default function Projects(props) {
             title="Bites Dev"
             text="isl ut aliquip ex ea commodo consequat. Duis autem"
             alt="Bites Dev"
+            href="https://bitesdev.netlify.app"
             // marginLeft="0"
           />
         </Grid>
@@ -44,53 +31,11 @@ export default function Projects(props) {
             title="Echeverria Inmobiliaria"
             text="isl ut aliquip ex ea commodo consequat. Duis autem"
             alt="Echeverria Inmobiliaria"
+            href="https://echeverria-nico.netlify.app"
           />
         </Grid>
 
-        {/* <ProjectCard 
-          image="/images/project1.png"
-          title="Project 1"
-          text="isl ut aliquip ex ea commodo consequat. Duis autem"
-          alt="Project 1"
-        />
-
-        <ProjectCard 
-          image="/images/project2.png"
-          title="Project 2"
-          text="isl ut aliquip ex ea commodo consequat. Duis autem"
-          alt="Project 2"
-        />
-
-        <ProjectCard 
-          image="/images/project1.png"
-          title="Project 1"
-          text="isl ut aliquip ex ea commodo consequat. Duis autem"
-          alt="Project 1"
-        />
-
-        <ProjectCard 
-          image="/images/project2.png"
-          title="Project 2"
-          text="isl ut aliquip ex ea commodo consequat. Duis autem"
-          alt="Project 2"
-        />
-
-        <ProjectCard 
-          image="/images/project1.png"
-          title="Project 1"
-          text="isl ut aliquip ex ea commodo consequat. Duis autem"
-          alt="Project 1"
-        />
-
-        <ProjectCard 
-          image="/images/project2.png"
-          title="Project 2"
-          text="isl ut aliquip ex ea commodo consequat. Duis autem"
-          alt="Project 2"
-        /> */}
-
       </Grid>
-      {/* </div> */}
 
 
 		</section>

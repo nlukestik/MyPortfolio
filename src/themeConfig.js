@@ -10,6 +10,9 @@ const myTheme = createTheme({
       main: "#09DBA9",
       dark: "#0A2626"
     },
+    secondary : {
+      main: "#FFF"
+    }
     // text: {
     //   primary: "rgba(0, 0, 0, 0.87)",
     //   secondary: "rgba(0, 0, 0, 0.54)",

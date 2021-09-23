@@ -33,9 +33,10 @@ export default function AboutMe(props) {
 			<SectionTitle title="About me" />
 			
 			<p className={classes.text}>
-				isl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in 
-				vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero 
-				eros et accumsan et iusto odio dignissim qui blandit praese
+			Degree student in Information Systems with the ambition 
+			to incorporate new technologies and committed to the 
+			development of tasks required by the company. Looking to train 
+			in the labor sphere and explore my abilities to grow professionally.
 			</p>
 
 			

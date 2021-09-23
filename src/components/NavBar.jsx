@@ -1,23 +1,53 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { AppBar, Toolbar } from '@material-ui/core'
-import { Link } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
+import DrawerMenu from './DrawerMenu'
 import ScrollToChangeColor from './ScrollToChangeColor'
 
-const useStyles = makeStyles(myTheme => ({
+const useStyles = makeStyles(theme => ({
   navBar : {
-    justifyContent: "center"
+    justifyContent: "center",
   },
-  hireMe : {
-    background: "white",
-    color: "#00883a !important",
-    marginLeft: "1.3em !important",
-    padding: "0.4em 1em",
-    borderRadius: "10em"
-  },
-  // offset: myTheme.mixins.toolbar
-}))
+	menuDeskContainer : {
+		display: "flex",
+		maxWidth: 1300,
+		width: "100%",
+		alignItems: "center",
 
+		"& .nav-item" : {
+			marginLeft: "1em",
+			backgroundColor: "white",
+			color: "black",
+			border: "3px solid black",
+			padding: "0.6em 1.2em",
+			fontSize: 15,
+			fontWeight: "bold",
+			textDecoration: "none",
+			cursor: "pointer",
+			"&:hover" : {
+				backgroundColor: "#09DBA9",
+				transition: "ease-in 0.2s"
+			}
+		},
+
+		[theme.breakpoints.between(0,769)]: {
+			display: "none"
+		},
+		[theme.breakpoints.up(769)]: {
+			display: "flex",
+		},	
+	},
+	drawerMenuContainer : {
+		[theme.breakpoints.between(0,769)]: {
+			display: "block"
+		},
+		[theme.breakpoints.up(769)]: {
+			display: "none"
+		},
+	},
+
+}))
 
 export default function Navbar(props) {
 	const classes = useStyles()
@@ -26,14 +56,25 @@ export default function Navbar(props) {
     <div >
       
       <ScrollToChangeColor>
-        <AppBar>
+        <AppBar position="static">
           <Toolbar className={classes.navBar}>
 
-            <div className="navToolbar">
+            <div className={classes.menuDeskContainer}>
               <div style={{flexGrow: "1"}}>
                 {/* <img src="images/NL.png" alt="" style={{height:"4em"}} /> */}
               </div>
               
+							<Link
+								activeClass="active"
+								onClick={() => scroll.scrollToTop()}
+								spy={true}
+								smooth={true}
+								duration={500}
+								className="nav-item"
+							>
+								Home
+							</Link>
+
 							<Link
 								activeClass="active"
 								to="aboutMe"
@@ -46,7 +87,7 @@ export default function Navbar(props) {
 								About me
 							</Link>
 
-							<Link
+							{/* <Link
 								activeClass="active"
 								to="skills"
 								spy={true}
@@ -56,7 +97,7 @@ export default function Navbar(props) {
 								className="nav-item"
 							>
 								Skills
-							</Link>
+							</Link> */}
 
 							<Link
 								activeClass="active"
@@ -71,6 +112,9 @@ export default function Navbar(props) {
 							</Link>
 
             </div>
+						<div className={classes.drawerMenuContainer}>
+								<DrawerMenu />
+						</div>
             
           </Toolbar>
         </AppBar>

@@ -55,7 +55,9 @@ export default function ProjectCard(props) {
 
         </CardContent>
         
-        <SvgArrowRight />
+        <a href={props.href} style={{textDecoration:"none"}}>
+          <SvgArrowRight />
+        </a>
           
       </Card>
     </>
