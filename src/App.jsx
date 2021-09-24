@@ -8,6 +8,7 @@ import AboutMe from './components/AboutMe.jsx'
 // import Skills from './components/Skills.jsx'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
+// import SocialsFAB from './components/SocialsFAB'
 
 const useStyles = makeStyles((theme) => ({
 	home: {
@@ -60,6 +61,7 @@ export default function App() {
 			<Contact />
 
       <BackToTop />
+			{/* <SocialsFAB /> */}
 
     </ThemeProvider>
 
