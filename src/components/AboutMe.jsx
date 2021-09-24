@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import SectionTitle from './SectionTitle';
+import SectionTitle from './SectionTitle'
 
 const useStyles = makeStyles((theme) => ({
 	text : {
@@ -33,7 +33,7 @@ export default function AboutMe(props) {
 			<SectionTitle title="About me" />
 			
 			<p className={classes.text}>
-			Degree student in Information Systems with the ambition 
+			Student of Information Systems and Front End Developer with the ambition 
 			to incorporate new technologies and committed to the 
 			development of tasks required by the company. Looking to train 
 			in the labor sphere and explore my abilities to grow professionally.
