@@ -61,7 +61,7 @@ export default function App() {
 			<Contact />
 
       <BackToTop />
-			<SocialsFAB />
+			{/* <SocialsFAB /> */}
 
     </ThemeProvider>
 
