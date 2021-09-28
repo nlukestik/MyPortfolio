@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 		width: "100vw"
 	},
 	menuButton : {
-		
+		padding:0
 	},
 	imgStyle: {
 		width: "250px",

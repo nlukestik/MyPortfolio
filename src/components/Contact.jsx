@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Button, Tooltip } from '@material-ui/core'
 import {ReactComponent as SvgCopy} from '../svgicons/copy.svg';
@@ -37,8 +37,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.2em",
 		justifyContent: "center",
 		textAlign: "center",
-		[theme.breakpoints.between('sm','md')]: {
-			// fontSize: 14,
+		[theme.breakpoints.down(802)]: {
+			fontSize: 12,
+			paddingBottom: "1em",
 		},
 	},
 	formEmail: {
@@ -50,50 +51,46 @@ const useStyles = makeStyles((theme) => ({
 	},
 	email: {
 		padding: "1em",
-		[theme.breakpoints.down('xs')]: {
-			fontSize: 11
+		[theme.breakpoints.down(368)]: {
+			fontSize: 11,
+			padding: "1em 0",
+		},
+		[theme.breakpoints.between(368,600)]: {
+			fontSize: 14,
+			padding: "1em .2em",
 		},
 	},
 	formButtons: {
 		
 	},
 	cvButtons: {
+		display: "flex",
 		width: "100%",
 		padding: "0.7em 0.5em",
 		textAlign: "center",
+		justifyContent: "center",
 		alignItems: "center",	
 		color: "#09DBA9",
 		border: "2px solid black",
-		textDecoration: "none"
+		textDecoration: "none",
+		[theme.breakpoints.down('xs')]: {
+			fontSize: 14
+		},
 	},
 	copyBtn : {
 		minWidth: "0",
 		marginLeft: "1em",
 		padding:"0",
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down(717)]: {
 			display: "none"
 		},
 	},
-
-
-	// [theme.breakpoints.down('sm')]: {
-	// 	margin: "10px auto",
-	// 	justifyContent: "left",
-	// 	textAlign: "justify",
-	// 	fontSize: 18,
-	// },
-	// [theme.breakpoints.between('sm','md')]: {
-	// 	width: "60%",
-	// },
-	// [theme.breakpoints.up('lg')]: {
-	// 	width: "55%",
-	// },
 }));
 
 export default function Contact() {
 	const classes = useStyles()
   
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = useState(false);
   
   const email = "nicolaslukestik@gmail.com"
   

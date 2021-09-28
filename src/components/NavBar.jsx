@@ -40,7 +40,10 @@ const useStyles = makeStyles(theme => ({
 	},
 	drawerMenuContainer : {
 		[theme.breakpoints.between(0,769)]: {
-			display: "block"
+			display: "block",
+			position: "fixed",
+			top: 6,
+			right: 15,
 		},
 		[theme.breakpoints.up(769)]: {
 			display: "none"

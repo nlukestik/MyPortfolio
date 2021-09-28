@@ -1,12 +1,12 @@
 import React from 'react'
 // import { makeStyles } from '@material-ui/core/styles'
-import { Grid } from '@material-ui/core';
-import ProjectCard from './ProjectCard';
+import { Grid } from '@material-ui/core'
+import ProjectCard from './ProjectCard'
 import SectionTitle from './SectionTitle'
 
 export default function Projects(props) {
   // const classes = useStyles()
-  
+
 	return(
     <section id="projects">
 			
