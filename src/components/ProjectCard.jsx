@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 		},
   },
   text : {
-    margin: "0",
+    margin: ".5em 0",
     fontSize: 19,
 		textAlign: "justify",
 		[theme.breakpoints.down('md')]: {

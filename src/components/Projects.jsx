@@ -18,7 +18,7 @@ export default function Projects(props) {
           <ProjectCard
 						image="/images/bites-dev.png"
             title="Bites Dev"
-            text="isl ut aliquip ex ea commodo consequat. Duis autem"
+            text="[Currently in development] Web Development company. This project is still in development phase, using React and Material UI."
             alt="Bites Dev"
             href="https://bitesdev.netlify.app"
             // marginLeft="0"
@@ -29,7 +29,7 @@ export default function Projects(props) {
           <ProjectCard 
             image="/images/echeverria-inmobiliaria.png"
             title="Echeverria Inmobiliaria"
-            text="isl ut aliquip ex ea commodo consequat. Duis autem"
+            text="[Currently in development] Real Estate Agency WebApp with external API access to get product data. Front end built with React and Material UI." 
             alt="Echeverria Inmobiliaria"
             href="https://echeverria-nico.netlify.app"
           />

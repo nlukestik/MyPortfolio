@@ -5,14 +5,11 @@ import SectionTitle from './SectionTitle'
 const useStyles = makeStyles((theme) => ({
 	text : {
 		margin: "2em auto",
-		justifyContent: "center",
 		fontWeight: "bold",
 		fontSize: "1.3em",
-		textAlign: "left",
+		textAlign: "justify",
 		[theme.breakpoints.down('sm')]: {
 			margin: "10px auto",
-			justifyContent: "left",
-			textAlign: "justify",
 			fontSize: 18,
 		},
 		[theme.breakpoints.between('sm','md')]: {
@@ -33,10 +30,10 @@ export default function AboutMe(props) {
 			<SectionTitle title="About me" />
 			
 			<p className={classes.text}>
-			Student of Information Systems and Front End Developer with the ambition 
-			to incorporate new technologies and committed to the 
-			development of tasks required by the company. Looking to train 
-			in the labor sphere and explore my abilities to grow professionally.
+				Student of Information Systems and Front End Developer with the ambition 
+				to incorporate new technologies and committed to the 
+				development of tasks required by the company. Looking to train 
+				in the labor sphere and explore my abilities to grow professionally.
 			</p>
 
 			
