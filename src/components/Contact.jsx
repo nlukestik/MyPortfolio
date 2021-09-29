@@ -138,7 +138,7 @@ export default function Contact() {
 
 						<Grid item sm={6} xs={12} style={{display: "flex"}}>
 								<a className={classes.cvButtons} href="CV-Nicolas-Lukestik.pdf" download >
-									<code>CV (Spanish)</code> 
+									<code>CV (Español)</code>
 								</a>
 						</Grid>
 

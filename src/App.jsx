@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "115px 90px",
 	},
 	section : {
-		margin: "10.5rem auto 5em",
+		margin: "11rem auto 5em",
     flexWrap: "wrap",
     boxSizing: "border-box",
     maxWidth: "70%",

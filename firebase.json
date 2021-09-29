@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "nicolukestik",
     "public": "build",
     "ignore": [
       "firebase.json",
