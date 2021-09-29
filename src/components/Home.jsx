@@ -55,6 +55,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	avatar : {
     position: "absolute",
+    zIndex:0,
 		[theme.breakpoints.down(600)]: {
 			width: "100%",
       height: 430,
@@ -119,6 +120,7 @@ const useStyles = makeStyles(theme => ({
   },
 	iconLinkContainer: {
     position: "absolute",
+    zIndex: 9999,
 		display: "flex",
     [theme.breakpoints.down(600)]: {
 			top: 460,
@@ -159,11 +161,6 @@ export default function Home() {
 
   return (
     <div className={classes.root}>
-
-      <div className={classes.square} />
-
-      <img src="/images/avatar.png" alt="avatar" className={classes.avatar} />
-
       <div className={classes.iconLinkContainer}>
 				<div className={classes.iconItem}>
 					<Link href="https://github.com/nlukestik" target="_blank">
@@ -199,6 +196,12 @@ export default function Home() {
 					</Link>
 				</div>
 			</div>
+
+      <div className={classes.square} />
+
+      
+      <img src="/images/avatar.png" alt="avatar" className={classes.avatar} />
+
 
       <div className={classes.titleContainer}>
         <h1 className={classes.title}>Nicolas Lukestik</h1>
