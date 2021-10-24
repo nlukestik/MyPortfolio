@@ -113,7 +113,7 @@ export default function Contact() {
 						<div className={classes.email}>
 							<code>
 								<a 
-									href="mailto:nicolaslukestik@gmail.com" 
+									href={`mailto:${email}`} 
 									style={{textDecoration: "none", color: "black"}}>
 									{email}
 								</a>

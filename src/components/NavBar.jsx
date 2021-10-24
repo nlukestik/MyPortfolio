@@ -26,8 +26,9 @@ const useStyles = makeStyles(theme => ({
 			textDecoration: "none",
 			cursor: "pointer",
 			"&:hover" : {
-				backgroundColor: "#09DBA9",
-				transition: "ease-in 0.2s"
+				backgroundColor: "black",
+				color: "white",
+				transition: "ease-in 0.1s"
 			}
 		},
 
@@ -56,10 +57,10 @@ export default function Navbar(props) {
 	const classes = useStyles()
 
 	return (
-    <div >
+    <div style={{zIndex: 2}}>
       
       <ScrollToChangeColor>
-        <AppBar position="static">
+        <AppBar>
           <Toolbar className={classes.navBar}>
 
             <div className={classes.menuDeskContainer}>
