@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 				display: "flex",
 				justifyContent: "center",
 				alignItems: "center",
-				height: "25vh",
+				height: "10vh",
 				margin: 0,
 			},
 			
@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	list : {
+		display: "flex",
+		justifyContent: "center",
+		alignItems: "center",
 		position: "absolute",
 		height: "100vh",
 		width: "100vw"
