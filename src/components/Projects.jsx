@@ -31,7 +31,7 @@ export default function Projects(props) {
             title="Echeverria Inmobiliaria"
             text="[Currently in development] Real Estate Agency WebApp with external API access to get product data. Front end built with React and Material UI." 
             alt="Echeverria Inmobiliaria"
-            href="https://echeverria-nico.netlify.app"
+            href="https://echeverria-web.web.app"
           />
         </Grid>
 
